@@ -1,0 +1,172 @@
+.nav-bar{
+    width: 100%;
+    height: 5rem;
+    background-color: blue;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    
+}
+.left-side{
+    padding-left: 2rem;
+    display: flex;
+    flex-direction: row;
+   justify-content: space-between;
+}
+.search-input{
+    height: 2rem;
+    width: 25rem;
+    border-radius: 0.5rem;
+    border-color: transparent;
+}
+.search-btn{
+    height: 2.5rem;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    border-color: transparent;
+    
+}
+.search-btn:hover{
+    background-color: green;
+    color: white;
+}
+.div-serach-btn{
+    padding-left: 0.1rem;
+}
+.right-side{
+    display: flex;
+    flex-direction: row;
+    margin-left: auto;
+    margin-right: 2rem;
+}
+.leftSide-link{
+    margin-right: 2rem;
+   font-size: 1.2rem;
+}
+.rightSide-link{
+    margin-right: 2rem;
+   font-size: 1.2rem;
+}
+.new-user-link{
+    text-decoration: none;
+    color: white;
+}
+.new-user-link:hover{
+    color: aliceblue;
+}
+.old-user-link{
+    text-decoration: none;
+    color: white;
+}
+.old-user-link:hover{
+    color: aliceblue;
+}
+.openOption{
+    display: none;
+}
+#hidden{
+    display: flex;
+   }
+@media only screen and (max-width:500px){
+    .nav-bar{
+        flex-direction: row;
+        font-size: 1rem;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+    }
+    .search-input{
+        height: 2rem;
+        width: 13rem;
+        border-radius: 0.5rem;
+        border-color: transparent;
+    }
+    .openOption{
+        display: flex;
+        height: 2.5rem;
+        width: 5rem;
+        margin-top: 0.5rem;
+        justify-items: center;
+        align-items: center;
+        margin-right: 1rem;
+        border: none;
+        border-radius: 00.5rem;
+        margin-left: 3rem;
+        align-items: center;
+        justify-items: center;
+        justify-content: center;
+        font-size: 1rem;
+      }
+   .right-side{
+    display: none;
+   }
+   #hidden{
+    position: absolute;
+    left: 0px;
+    top: 80px;
+    height: 230px;
+    width: 20rem;
+    background-color: blue;
+    color: white;
+    flex-direction: column;
+    padding-bottom: 10rem;
+     }
+
+}
+.user-log{
+    margin-left: auto;
+    margin-right: 3rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+ 
+}
+.image-user{
+    padding-right: 1rem;
+}
+.name-user{
+    padding-right: 1rem;
+    font-size: 1rem;
+}
+
+.resume-user{
+    padding-right: 1rem;
+    font-size: 1rem;
+
+}
+.logOut-user{
+    padding-left: 1rem;
+    font-size: 1rem;
+}
+#hidden2{
+    position: absolute;
+    left: 0px;
+    top: 80px;
+    height: 230px;
+    width: 20rem;
+    background-color: blue;
+    color: white;
+    flex-direction: column;
+    padding-bottom: 10rem;
+     }
+     .username-link{
+        text-decoration: none;
+        color: aliceblue;
+     }
+     .username-link:hover{
+        color: aliceblue;
+     }
+     .resume-link{
+        text-decoration: none;
+        color: aliceblue;
+     }
+     .resume-link:hover{
+        color: aliceblue;
+     }
+     .logout-link{
+        text-decoration: none;
+        color: aliceblue;  
+     }
+     .logout-link:hover{
+        color: aliceblue;
+     }

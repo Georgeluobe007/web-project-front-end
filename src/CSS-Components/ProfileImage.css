@@ -1,0 +1,89 @@
+.input-img[type ="file"]{
+    display: none;
+    
+}
+
+.image-screen{
+    height:7rem;
+    width: 7rem;
+    border-radius: 50rem;
+   }
+  .user-container{
+    position: absolute;
+    margin-top: 25rem;
+    margin-left: 5rem;
+   }
+   .user-row{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   }
+   .edit-button{
+    font-size: 1.2rem;
+    width: 10rem;
+    margin-left: 1rem;
+    border: transparent 0.2rem solid;
+    background-color: blue;
+    color: white;
+    border-radius: 0.2rem;
+   }
+   .edit-button2{
+    font-size: 1.2rem;
+    width: 10rem;
+    margin-left: 1rem;
+    border: transparent 0.2rem solid;
+    background-color: blue;
+    color: white;
+    border-radius: 0.2rem;
+   }
+   .image-edit{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+   }
+   .name-edit{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5rem;
+   }
+   .input-img[type ="file"]{
+    display: none;
+}
+.image-upload{
+    margin-right: auto;
+}
+.editprofileimg1{
+  width: 100vw;
+  height: 100vh;
+    background-color: transparent;
+    justify-content: center;
+    display: flex;
+}
+.editprofileimg{
+    height: 22rem;
+    width: 20rem;
+    background-color: whitesmoke;
+    margin-top: 2rem;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+.times{
+    transform: rotate(45deg);
+    margin-left: auto;
+    cursor: pointer;
+    
+    
+}
+.btn-upload{
+    margin-left: 2rem;
+    margin-top: 0.5rem;
+    background-color: blue;
+    color: white;
+    border: 0.2rem;
+    font-size: 1.2rem;
+}
