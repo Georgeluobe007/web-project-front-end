@@ -42,15 +42,15 @@ Axios.post("http://localhost:3002/user/login",{
   if(response.data.usermessage){
    console.log("i am here with you");
   }else{
-   localStorage.setItem("accessWebToken", response.data.token1);
+   localStorage.setItem("accessWebToken", response.data.token1); 
    setAuthState({
     name: response.data.Name,
     photo: response.data.UserImage,
     id: response.data.id,
     status: true
    })
-   navigator("/user-page")
-  
+   navigator("/")
+   window.location.reload(true)
   }
 })
   }

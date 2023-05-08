@@ -1,0 +1,86 @@
+.post-work{
+  
+    display: flex;
+    flex-direction: column;
+    align-items: center ;
+    justify-content: center;
+}
+.three-column{
+    display: flex;
+    flex-direction: row;
+    align-items: center ;
+    justify-content: center;
+    width: 100vw;
+    
+}
+.writting{
+    
+    width: 60% ;
+}
+.slider1{
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  align-items: center ;
+margin-bottom: 100rem;
+}
+.api{
+    width: 20%;
+    width: 20rem;
+    margin-bottom: auto;
+
+}
+
+
+
+
+.image-userName{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 2rem;
+}
+.image-userName-2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+.username{
+    margin-left: 0.5rem;
+    text-transform: capitalize;
+    margin-bottom: 2rem;
+}
+.footer-post{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+}
+.date-time{
+    font-size: 1rem;
+ font-family: cursive;
+ margin-right: 1rem;
+}
+.delete-post{
+    font-size: 1rem;
+    font-family: cursive;
+    cursor: pointer;
+}
+.edit-btn{
+    font-size: 1rem;
+ font-family: cursive;
+ margin-left: 1rem;
+}
+.btn-edit{
+    background-color: aliceblue;
+    border: none;
+
+}
+.celeteIcon{
+    font-size: 1.5rem;
+}
+.celeteIcon:hover{
+ color: red;
+}

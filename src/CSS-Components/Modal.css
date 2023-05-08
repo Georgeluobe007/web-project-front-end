@@ -1,0 +1,58 @@
+.title-post{
+    position: absolute;
+    background-color: whitesmoke;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    margin-top: 5rem;
+    
+}
+.title{
+    margin-left: 2rem;
+   
+}
+.input-text{
+    width: 24.5rem;
+    margin-left: 0.5rem;
+}
+.write-post{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    margin-top: 1rem;
+}
+.label-write-post{
+    margin-bottom: 13rem;
+    margin-right: .5rem;
+}
+.send-post{
+    margin-top: 0.5rem;
+    margin-left: 24rem;
+}
+.counsel{
+    transform: rotate(45deg);
+    margin-left: 30rem;
+    cursor: pointer;
+    font-size: 2rem;
+}
+.title-post2{
+    position: absolute;
+    background-color: whitesmoke;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    margin-top: 5rem;
+    
+}
+.editPost{
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    display: flex;
+}
+
+
+

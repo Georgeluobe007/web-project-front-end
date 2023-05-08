@@ -5,12 +5,23 @@ import '../CSS-Components/NavBar.css'
 import {Link,useNavigate} from 'react-router-dom'
 import {Image} from 'cloudinary-react'
 import ProfileImage from './ProfileImage'
-function NavBar() {
-  const [showhidden,setShowhidden] = useState(false);
-  const [imageOpt,setImageOpt] = useState({});
-const [toogle,setToogle] = useState(false)
+import UserPage from './UserPage'
+import DensityMediumIcon from '@mui/icons-material/DensityMedium';
+//import styled from 'styled-components'
+import styled from '@emotion/styled'
 
+
+
+function NavBar() {
+
+  const  [showhidden,setShowhidden] = useState(false)
+  const  [showLogInReg,setShowLogInReg] = useState(false)
+  const [imageOpt,setImageOpt] = useState({});
+const [toogle,setToogle] = useState(false);
+const {setSearchBar} = useContext(ContextAuth)
 const {authState,setAuthState} = useContext(ContextAuth);
+
+
 
 useEffect(() => {
   Axios.get("http://localhost:3002/user/auth",{
@@ -27,11 +38,18 @@ if(response.data.error){
     name: response.data.Name,
     id: response.data.id,
     photo: response.data.UserImage,
-    status: true
+    status: true,
+    userName: response.data.UserName,
   })
   setImageOpt(response.data);
   console.log(response.data);
 }
+//if(navigator.geolocation){
+ // navigator.geolocation.getCurrentPosition((position) =>{
+ //let lat = position.coords.latitude;
+ //let long = position.coords.longitude
+  //})
+//}
   })
 },[])
 const navigate = useNavigate();
@@ -42,37 +60,47 @@ const logOut = () => {
     id: 0,
     name: ""
   })
-  navigate("/");
+
+  navigate("/new-user");
+  window.location.reload(true)
 }
 
   return (
     <div className='nav-bar'>
         <div className='left-side'>
-          <div><input type="search" className='search-input'/></div>
-        <div className='div-serach-btn'><button className='search-btn'>Search</button></div>
+          <div>
+            <input type="search" className='search-input' 
+            onChange={event => {setSearchBar(event.target.value)}}
+            />
+            </div>
+       
        </div>
   {!authState.status ? (
     
     <>
     
-    <div className='right-side' id={showhidden ? "hidden": ""}>
-    <div className='leftSide-link' onClick={() => setShowhidden(!showhidden)}>
+    <div className='right-side' id={showLogInReg ? "logInAndRegButton": ""}>
+
+    <div className='leftSide-link' onClick={() => setShowLogInReg(!showLogInReg)}>
     <Link to="new-user" className='new-user-link'>
       Don't have account ?
       </Link>
     </div>
-     <div className='rightSide-link'onClick={() => setShowhidden(!showhidden)}>
+    
+     <div className='rightSide-link'onClick={() => setShowLogInReg(!showLogInReg)}>
      <Link to="old-user" className='old-user-link'>
       Already have account ?
       </Link>
      </div>
+     
    </div>
- <button className='openOption'onClick={() => setShowhidden(!showhidden)}>Open</button>
-</>
+   <div className='reglogIn'onClick={() => setShowLogInReg(!showLogInReg)}>{<DensityMediumIcon/>}</div>
+  </>
  
   ):(
-    <div className='user-log'>
-    <div className='image-user' onClick={() => {setToogle(!toogle)}} >
+    <>
+    <div className='navBar-logIn'  id={showhidden ? "hidden" : ""} onClick={() => setShowhidden(!showhidden)}>
+    <div className='image-user' onClick={() => {setToogle(!toogle)}}>
     
      {imageOpt.UserImage === "userimage.jpg" ? (
    <img src={authState.photo} style={{width:"3rem",height:"3rem",borderRadius:"5rem"}}
@@ -91,22 +119,28 @@ const logOut = () => {
      </Link>
      </div>
      <div className='resume-user'>
-     <Link className='resume-link'>
+     <Link className='resume-link'onClick={() => setShowhidden(!showhidden)}>
         resume
      </Link>
      </div>
      <div className='logOut-user' onClick= {logOut}>
-     <Link className='logout-link'>
+     <Link className='logout-link' onClick={() => {setToogle(!toogle)}}>
          Log Out
      </Link>
      </div>
+     </div>
+     <div className='openOption'onClick={() => setShowhidden(!showhidden)}>{<DensityMediumIcon/>}</div>
+    </>
     
-    </div>
   )}
 {toogle &&<ProfileImage toogle={setToogle}/>}
+   
+
     </div>
     
-  )
+      )
 }
+
+
 
 export default NavBar

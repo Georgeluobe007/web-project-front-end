@@ -1,5 +1,5 @@
 .nav-bar{
-    width: 100%;
+    width: 100vw;
     height: 5rem;
     background-color: blue;
     display: flex;
@@ -61,10 +61,24 @@
 .old-user-link:hover{
     color: aliceblue;
 }
+.navBar-logIn{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+   margin-left: auto;
+   margin-right: 2rem;
+}
+.reglogIn{
+    display: none;
+}
 .openOption{
     display: none;
 }
-#hidden{
+
+#logInAndRegButton{
+    display: flex;
+   }
+   #hidden{
     display: flex;
    }
 @media only screen and (max-width:500px){
@@ -75,44 +89,69 @@
         align-items: center;
         display: flex;
     }
-    .search-input{
+    .left-side{
         height: 2rem;
-        width: 13rem;
+        width: 5rem;
         border-radius: 0.5rem;
         border-color: transparent;
+        margin-right: auto;
     }
-    .openOption{
+    .search-input{
+        width: 13rem;
+    }
+    #logInAndRegButton{
+        position: absolute;
+        left: 10px;
+        top: 80px;
+        height: 15px;
+        width: 15rem;
+        background-color: blue;
+        color: white;
+        flex-direction: column;
+        padding-bottom: 10rem;
+     }
+     #hidden{
+        position: absolute;
+        left: 10px;
+        top: 80px;
+        height: 15px;
+        width: 15rem;
+        background-color: blue;
+        color: white;
+        flex-direction: column;
+        padding-bottom: 10rem;
+     }
+     .reglogIn{
         display: flex;
-        height: 2.5rem;
-        width: 5rem;
+        height: 2.3rem;
         margin-top: 0.5rem;
         justify-items: center;
         align-items: center;
-        margin-right: 1rem;
+       margin-left: auto;
+       margin-right: 1rem;
         border: none;
         border-radius: 00.5rem;
-        margin-left: 3rem;
-        align-items: center;
+        color: white;
+    }
+    .openOption{
+        display: flex;
+        height: 2.3rem;
+        margin-top: 0.5rem;
         justify-items: center;
-        justify-content: center;
-        font-size: 1rem;
-      }
-   .right-side{
-    display: none;
-   }
-   #hidden{
-    position: absolute;
-    left: 0px;
-    top: 80px;
-    height: 230px;
-    width: 20rem;
-    background-color: blue;
-    color: white;
-    flex-direction: column;
-    padding-bottom: 10rem;
+        align-items: center;
+       margin-left: auto;
+       margin-right: 1rem;
+        border: none;
+       color: white;
      }
+      .navBar-logIn{
+        display: none;
+      }
+      .right-side{
+        display: none;
+      }
 
-}
+    }
 .user-log{
     margin-left: auto;
     margin-right: 3rem;
@@ -121,9 +160,7 @@
     align-items: center;
  
 }
-.image-user{
-    padding-right: 1rem;
-}
+
 .name-user{
     padding-right: 1rem;
     font-size: 1rem;
@@ -138,17 +175,7 @@
     padding-left: 1rem;
     font-size: 1rem;
 }
-#hidden2{
-    position: absolute;
-    left: 0px;
-    top: 80px;
-    height: 230px;
-    width: 20rem;
-    background-color: blue;
-    color: white;
-    flex-direction: column;
-    padding-bottom: 10rem;
-     }
+
      .username-link{
         text-decoration: none;
         color: aliceblue;
@@ -170,3 +197,5 @@
      .logout-link:hover{
         color: aliceblue;
      }
+  
+    

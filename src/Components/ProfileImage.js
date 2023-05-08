@@ -37,8 +37,8 @@ export default function ProfileImage({toogle}) {
   },[])
 const navigate = useNavigate();
   return (
-    <div className='user-container' >
-    <div className='user-row'>
+    <div className='user-container' onClick={() => toogle(false)}>
+    <div className='user-row'> 
       <div className='image-edit'>
     {imageOpt.UserImage === "userimage.jpg" ? (
    <img src={authState.photo} style={{width:"10rem",height:"10rem",borderRadius:"5rem"}}/>
@@ -47,9 +47,10 @@ const navigate = useNavigate();
    <Image cloudName="georgecancode"  public_id={authState.photo} style={{width:"10rem",height:"10rem",borderRadius:"5rem"}}/>
         </>
 )}
-<Link to="/edit-profile-image">
-<button className='edit-button' onClick={()=>toogle(false)}>Edit</button>
-</Link>
+
+<button className='edit-button' onClick={()=>navigate(`/edit-profile-image/${authState.id}`)}>Edit</button> 
+
+
 </div>
 <div className='name-edit'>
 <h3>{authState.name}</h3>
